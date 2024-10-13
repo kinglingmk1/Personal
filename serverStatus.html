@@ -110,8 +110,7 @@
                 }
             })
             .catch(error => {
-                document.getElementById('server-status').innerText = 'Server is offline';
-                alert(error);
+                document.getElementById('server-status').innerText = 'Server is offline with error: ' + error;
             });
     }
 
