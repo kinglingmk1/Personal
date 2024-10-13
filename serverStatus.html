@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="icon" type="image/png" href="image.png"/>
+  <title>kinglingmk1</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+<style type="text/css">
+  .back{
+    position:absolute;
+    z-index: 1;
+    left: 35px;
+    top:25px;
+  }
+  .front{
+    position:absolute;
+    z-index: 2;
+    left: 20px;
+    top:15px;
+  }
+  .WebIDName{
+    position:absolute;
+    z-index: 2;
+    left: 150px;
+    top:25px;
+  }
+  #tt1{
+    position:absolute;
+    z-index: 2;
+    left: 400px;
+    top:25px;
+  }
+  #tt2{
+    position:absolute;
+    z-index: 2;
+    left: 520px;
+    top:25px;
+  }
+  #tt3{
+    position:absolute;
+    z-index: 2;
+    left: 620px;
+    top:25px;
+  }
+  .video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 99%;
+  height: 100%; 
+  overflow: hidden;
+  z-index: -1;
+  
+}
+
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 99%; 
+  min-height: 100%; 
+  
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.ReadMore{
+  background-color: #333333;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.ReadMore:hover {
+  background-color: rgba(0,0,0,0.5);
+  border: 1px solid #333333;
+  color: white;
+}
+.AboutTitle{
+    text-align: center;
+}
+
+</style>
+<script>
+  var toAbout = document.querySelector(".video-container2")
+  function goToAbout(){
+    toAbout.scrollIntoView()
+  }
+  function checkServerStatus() {
+    alert('Checking server status...');
+        fetch('https://www.google.com', { method: 'HEAD' })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('server-status').innerText = 'Server is online';
+                } else {
+                    document.getElementById('server-status').innerText = 'Server is offline';
+                }
+            })
+            .catch(error => {
+                document.getElementById('server-status').innerText = 'Server is offline';
+                alert(error);
+            });
+    }
+
+    // Call the function to check server status when the page loads
+    window.onload = checkServerStatus;
+</script>
+<div class="topPatten">
+  <div id="backgroundColour">
+    <div id="WebImages">
+      <a href="https://steamcommunity.com/profiles/76561198159195507/" class="avatar-holder">
+        <div class="front">
+        <img class="avatar-frame" src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/2459330/99dca1cd53a58ed9b05a4d6e7bb54942bc49a2e8.png" height="106" width="106" alt="">
+        </div>
+        <div class="back">
+          <img class="avatar" src="https://avatars.cloudflare.steamstatic.com/50969c6e75ea7931552e0a2320b5a4680b5bf1c5_full.jpg" height="80" width="80" alt="">
+        </div>
+      </a>
+      <br><br><br><br><br>
+    </div>
+  </div>
+  <div class="WebIDName"><h1><a href="index.html" style="color:black">kinglingmk1</a></h1></div>
+  <div id="HiddenMenu" class="Hidden">
+    <ul><li>
+    <b>Menu</b>
+    <dvi class="rotate"><img src="image/arrow.png" width="10" height="10" id="arrow">
+    </dvi>
+    <ul class="SubMain">
+    <li><a href="Discord.html" style="color:black"><b>Discord</b></a></li>
+    <li><a href="https://live.kinglingmk1.com/live/" style="color:black"><b>On Air</b></a></li>
+    </ul></li>
+    </ul>
+  </div>
+  <div id="HiddenMenu2" class="Hidden">
+    <ul><li>
+    <b>Menu</b>
+    <dvi class="rotate"><img src="image/arrow.png" width="10" height="10" id="arrow">
+    </dvi>
+    <ul class="SubMain2">
+    <li><a href="AboutMe.html" style="color:black"><b>About Me</b></a></li>
+    <li><a href="Discord.html" style="color:black;"><b>Discord</b></a></li>
+    <li><a href="https://live.kinglingmk1.com/live/" style="color:black;"><b>On Air</b></a></li>
+    </ul></li>
+    </ul>
+  </div>
+  <dvi id="tt0"></dvi>
+  <div id="tt1"><b><a href="AboutMe.html" style="color:black">About Me</a></b></div>
+  <dvi id="tt0"></dvi>
+  <div id="tt2"><b><a href="Discord.html" style="color:black">Discord</a></b></div>
+  <dvi id="tt0"></dvi>
+  <div id="tt3"><b><a href="https://live.kinglingmk1.com/live/" style="color:black">On Air</a></b></div>
+  <dvi id="tt0"></dvi>
+  <div id="icon"><a href=""><img src="git.png" width="50"></a></div>
+  <dvi id="tt0"></dvi>
+  <div id="icon2"><a href=""><img src="discord.png" width="50"></a></div>
+  <br><br><br><br><br><br>
+  </div>
+  <p><center><h1><a href="index.html" style="color:white;"><font face="Helvetica">PVE Server Status</font></a></h1></center></p>
+<br>
+<p id="server-status" style="text-align: center; color: white;"></p>
+<br>
+  <p><center><h1><font face="Helvetica"><button class="ReadMore" onclick="checkServerStatus()">Refresh</button></font></h1></center></p>
+</div>
+</div>
+</body>
+</html>
