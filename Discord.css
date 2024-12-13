@@ -1,0 +1,322 @@
+body {
+    font-family: Arial; /** Set full pages word in arial. **/
+    background: #333333;/** Set the color same like discord default mode color. **/
+  }
+  #backgroundColour {
+    background: grey; /** Set top title in grey. **/
+    border-radius: 8px; /** Set side of title looks sleek. **/
+    margin: 5px;  /** set all 4 side in 5px (Look's good for me) **/
+  }
+  #WebImages {
+    border: 1px solid black; /** Set side thickness. **/
+    border-radius: 8px; /** Set side of title looks sleek then sleek. **/
+    padding: 15px;
+    display: flex; /** display in flex **/
+  }
+  #tt0 { padding-right: 50px; } /** To separate Calculator Club | How to used | Contact Us | Creator Saids**/
+  #tt1, #tt2, #tt3 {
+  padding-top: 32px; /** Align position top title **/
+  color:black;        /** Make text black **/
+  text-decoration:none; /** Remove underline **/
+  }
+  #tt2 b:hover, #tt3 b:hover { /**Mouse hit**/
+    background-color: #4CAF50; /** Light green? **/
+    text-decoration:none; /**Remove underline**/
+    transition-duration: 0.4s; /** Smooth the button background show **/
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    /** Show shadow when click **/
+  }
+  a:hover{
+    /** Remove text underline and make text black **/
+    text-decoration:none;
+    color:black;
+  }
+  a { text-decoration:none /** Remove text underline **/}
+  #button { /* Calculator button */
+    background-color: grey;
+    color: white; /* Make button number and symbol to black */
+    text-align: center; /* Make button text be center */
+    width: 100%; /* Set button width full of the table */
+  }
+  table {
+    margin: auto; /* Use auto looks good */
+    width: 50%;
+  }
+  table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  th, td { background-color: grey; }
+  #button:hover{ /* Calculator button click effect */
+    background: #96D4D4;
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  #button:active { background: black; } /* After click button change to black */
+  #HiddenMenu { display: none; }
+  #HiddenMenu2 { display: none; }
+  #icon{
+    position:absolute;
+    z-index: 2;
+    left: 800px;
+    top:25px;
+    padding-top: 15px; /** Align position top title **/
+  }
+  #icon2{
+    position:absolute;
+    z-index: 2;
+    left: 900px;
+    top:25px;
+    padding-top: 22px; /** Align position top title **/
+  }
+  .video-container2 {
+      top: 770px;
+      position: absolute;
+      width: 99%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+  }
+  @media only screen and (max-width: 1920px) {
+    .video-container2 {
+      position: absolute;
+      width: 99%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+  }
+   #HiddenMenu { display: none; }
+   #HiddenMenu2 { display: none; }
+    #icon{
+      position:absolute;
+      z-index: 2;
+      left: 800px;
+      top:25px;
+      padding-top: 15px; /** Align position top title **/
+   }
+   #icon2{
+    position:absolute;
+      z-index: 2;
+      left: 900px;
+      top:25px;
+      padding-top: 22px; /** Align position top title **/
+   }
+  }
+  @media only screen and (max-width: 1280px) {
+    .video-container2 {
+      position: absolute;
+      width: 99%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+  }
+   #HiddenMenu {
+    padding: 16px;
+    display: flex;
+    position:absolute;
+      z-index: 2;
+      left: 500px;
+      top:25px;
+   }
+   #tt2 { display: none; }
+   #tt3 { display: none; }
+   #icon{
+      position:absolute;
+      z-index: 2;
+      left: 650px;
+      top:25px;
+      padding-top: 15px; /** Align position top title **/
+   }
+   #icon2{
+    position:absolute;
+      z-index: 2;
+      left: 750px;
+      top:25px;
+      padding-top: 22px; /** Align position top title **/
+   }
+  }
+  @media only screen and (max-width: 1024px) {
+    .video-container2 {
+      top: 770px;
+      position: absolute;
+      width: 99%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+  }
+   #HiddenMenu { display: none; }
+   #HiddenMenu2 {
+    padding: 16px;
+    display: inline-block;
+    position:absolute;
+      z-index: 2;
+      left: 400px;
+      top:25px;
+   }
+   #tt1 { display: none; }
+   #tt2 { display: none; }
+   #tt3 { display: none; }
+   #icon{ display: none; }
+   #icon2{ display: none; }
+  }
+  
+  /*Hidden Main*/
+  .SubMain li{ 
+   overflow: hidden;
+   height: 0px;
+   transition: height 500ms;
+  }
+  .SubMain2 li{ 
+   overflow: hidden;
+   height: 0px;
+   transition: height 500ms;
+  }
+  #HiddenMenu2 li:hover .SubMain2 li{ height: 40px; }
+  .Hidden ul{ list-style: none; display:inline; }
+  #HiddenMenu2 li:hover, #HiddenMenu li:hover{ color: red; }
+  .SubMain2 li:hover, .SubMain li:hover{ background: #4CAF50; }
+  #HiddenMenu li:hover .SubMain li{ height: 40px; }
+  
+  /* Rotate the triangle */
+  .rotate img:hover{
+    transform: rotate(90deg);
+    transition-property: transform;
+    transition-duration: 0.2s;
+  }
+  .rotate img{
+    transition-property: transform;
+    transition-duration: 0.2s;
+  }
+  
+  /*How To Used*/
+  .HowToBasicsTitle {
+    background: grey; /** Set top title in grey. **/
+    border-radius: 8px; /** Set side of title looks sleek. **/
+    margin: 5px;  /** set all 4 side in 5px (Look's good for me) **/
+    border: 1px solid black; /** Set side thickness. **/
+    border-radius: 8px; /** Set side of title looks sleek then sleek. **/
+    padding: 15px;
+    display: flex; /** display in flex **/
+  }
+  .HowToBasics {
+    background: grey; /** Set top title in grey. **/
+    border-radius: 8px; /** Set side of title looks sleek. **/
+    margin: 5px;  /** set all 4 side in 5px (Look's good for me) **/
+    border: 1px solid black; /** Set side thickness. **/
+    border-radius: 8px; /** Set side of title looks sleek then sleek. **/
+    padding: 15px;
+    display: flex; /** display in flex **/
+  }
+  .HowToBasicsTable {
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+  }
+  .HowToBasicsTable img {
+    size: 30px;
+  }
+  
+  /*Reference*/
+  .Ref {
+    background: grey; /** Set top title in grey. **/
+    border-radius: 8px; /** Set side of title looks sleek. **/
+    margin: 5px;  /** set all 4 side in 5px (Look's good for me) **/
+    border: 1px solid black; /** Set side thickness. **/
+    border-radius: 8px; /** Set side of title looks sleek then sleek. **/
+    padding: 15px;
+    display: flex; /** display in flex **/
+    font-weight: bold;
+  }
+  .RefTitle {
+    background: grey; /** Set top title in grey. **/
+    border-radius: 8px; /** Set side of title looks sleek. **/
+    margin: 5px;  /** set all 4 side in 5px (Look's good for me) **/
+    border: 1px solid black; /** Set side thickness. **/
+    border-radius: 8px; /** Set side of title looks sleek then sleek. **/
+    padding: 15px;
+    display: flex; /** display in flex **/
+  }
+    .back{
+      position:absolute;
+      z-index: 1;
+      left: 35px;
+      top:25px;
+    }
+    .front{
+      position:absolute;
+      z-index: 2;
+      left: 20px;
+      top:15px;
+    }
+    .WebIDName{
+      position:absolute;
+      z-index: 2;
+      left: 150px;
+      top:25px;
+    }
+    #tt1{
+      position:absolute;
+      z-index: 2;
+      left: 400px;
+      top:25px;
+    }
+    #tt2{
+      position:absolute;
+      z-index: 2;
+      left: 520px;
+      top:25px;
+    }
+    #tt3{
+      position:absolute;
+      z-index: 2;
+      left: 620px;
+      top:25px;
+    }
+  .video-container2 {
+      text-align: center;
+      width: 99%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+  }
+  
+  .video-container video {
+    /* Make video to at least 100% wide and tall */
+    min-width: 99%; 
+    min-height: 100%; 
+    
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+    
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .ReadMore{
+    background-color: #333333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  .ReadMore:hover {
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #333333;
+    color: white;
+  }
+  .AboutTitle{
+      text-align: center;
+  }
+  table, tr, td {
+      border: none;
+      background: rgba(0,0,0,0);
+  }

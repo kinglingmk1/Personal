@@ -206,3 +206,86 @@ th, td { background-color: grey; }
   padding: 15px;
   display: flex; /** display in flex **/
 }
+.back{
+  position:absolute;
+  z-index: 1;
+  left: 35px;
+  top:25px;
+}
+.front{
+  position:absolute;
+  z-index: 2;
+  left: 20px;
+  top:15px;
+}
+.WebIDName{
+  position:absolute;
+  z-index: 2;
+  left: 150px;
+  top:25px;
+}
+#tt1{
+  position:absolute;
+  z-index: 2;
+  left: 400px;
+  top:25px;
+}
+#tt2{
+  position:absolute;
+  z-index: 2;
+  left: 520px;
+  top:25px;
+}
+#tt3{
+  position:absolute;
+  z-index: 2;
+  left: 620px;
+  top:25px;
+}
+.video-container {
+position: absolute;
+top: 0;
+bottom: 0;
+width: 99%;
+height: 100%; 
+overflow: hidden;
+z-index: -1;
+
+}
+
+.video-container video {
+/* Make video to at least 100% wide and tall */
+min-width: 99%; 
+min-height: 100%; 
+
+/* Setting width & height to auto prevents the browser from stretching or squishing the video */
+width: auto;
+height: auto;
+
+/* Center the video */
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.ReadMore{
+background-color: #333333;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+transition-duration: 0.4s;
+}
+.ReadMore:hover {
+background-color: rgba(0,0,0,0.5);
+border: 1px solid #333333;
+color: white;
+}
+.AboutTitle{
+  text-align: center;
+}
