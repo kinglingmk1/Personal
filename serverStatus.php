@@ -99,23 +99,9 @@
   function goToAbout(){
     toAbout.scrollIntoView()
   }
-  function checkServerStatus() {
-    alert('Checking server status...');
-        fetch('https://www.google.com', { method: 'HEAD' })
-            .then(response => {
-                if (response.ok) {
-                    document.getElementById('server-status').innerText = 'Server is online';
-                } else {
-                    document.getElementById('server-status').innerText = 'Server is offline';
-                }
-            })
-            .catch(error => {
-                document.getElementById('server-status').innerText = 'Server is offline with error: ' + error;
-            });
-    }
-
-    // Call the function to check server status when the page loads
-    window.onload = checkServerStatus;
+  function checkServerStatus(){
+    location.reload()
+  }
 </script>
 <div class="topPatten">
   <div id="backgroundColour">
@@ -169,7 +155,21 @@
   </div>
   <p><center><h1><a href="index.html" style="color:white;"><font face="Helvetica">PVE Server Status</font></a></h1></center></p>
 <br>
-<p id="server-status" style="text-align: center; color: white;"></p>
+<p id="server-status" style="text-align: center; color: white;">
+<?php
+//ping pve.kinglingmk1.com:8006 is up
+$host = 'pve.kinglingmk1.com';
+$port = 8006;
+$waitTimeoutInSeconds = 1;
+if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){
+   echo "PVE Server Online";
+} else {
+   echo "PVE Server Offline";
+}
+fclose($fp);
+?>
+
+</p>
 <br>
   <p><center><h1><font face="Helvetica"><button class="ReadMore" onclick="checkServerStatus()">Refresh</button></font></h1></center></p>
 </div>
