@@ -41,7 +41,6 @@
                     document.getElementById("btn-lts").style.color = "#000000";
                     document.getElementById("btn-tech").style.backgroundColor = "#ffffff";
                     document.getElementById("btn-tech").style.color = "#000000";
-
                     break;
                 case "b2023":
                     document.getElementById("bUnity6").style.backgroundColor = "#ffffff";
@@ -66,6 +65,8 @@
                     document.getElementById("btn-lts").style.display = "none";
                     document.getElementById("btn-tech").style.backgroundColor = "#4c4c4c";
                     document.getElementById("btn-tech").style.color = "#ffffff";
+                    document.getElementById("th-supported").style.display = "none";
+                    document.getElementById("th-lts").style.display = "none";
                     document.getElementById("btn-tech").click();
                     
                     break;
@@ -96,7 +97,7 @@
                     document.getElementById("btn-lts").click();
                     document.getElementById("btn-tech").style.backgroundColor = "#ffffff";
                     document.getElementById("btn-tech").style.color = "#000000";
-
+                    document.getElementById("th-supported").style.display = "none";
 
                     break;
                 case "b2021":
@@ -125,6 +126,7 @@
                     document.getElementById("btn-lts").style.color = "#ffffff";
                     document.getElementById("btn-tech").style.backgroundColor = "#ffffff";
                     document.getElementById("btn-tech").style.color = "#000000";
+                    document.getElementById("th-supported").style.display = "none";
                     document.getElementById("btn-lts").click();
                     break;
                 case "b2020":
@@ -153,6 +155,7 @@
                     document.getElementById("btn-lts").style.color = "#ffffff";
                     document.getElementById("btn-tech").style.backgroundColor = "#ffffff";
                     document.getElementById("btn-tech").style.color = "#000000";
+                    document.getElementById("th-supported").style.display = "none";
                     document.getElementById("btn-lts").click();
                     break;
                 case "b2019":
@@ -181,6 +184,7 @@
                     document.getElementById("btn-lts").style.color = "#ffffff";
                     document.getElementById("btn-tech").style.backgroundColor = "#ffffff";
                     document.getElementById("btn-tech").style.color = "#000000";
+                    document.getElementById("th-supported").style.display = "none";
                     document.getElementById("btn-lts").click();
                     break;
                 case "b2018":
@@ -210,6 +214,7 @@
                     document.getElementById("btn-lts").style.color = "#ffffff";
                     document.getElementById("btn-tech").style.backgroundColor = "#ffffff";
                     document.getElementById("btn-tech").style.color = "#000000";
+                    document.getElementById("th-supported").style.display = "none";
                     document.getElementById("btn-lts").click();
                     break;
                 case "b2017":
@@ -238,6 +243,7 @@
                     document.getElementById("btn-lts").style.color = "#ffffff";
                     document.getElementById("btn-tech").style.backgroundColor = "#ffffff";
                     document.getElementById("btn-tech").style.color = "#000000";
+                    document.getElementById("th-supported").style.display = "none";
                     document.getElementById("btn-lts").click();
                     break;
                 case "bUnity5":
@@ -266,6 +272,7 @@
                     document.getElementById("btn-lts").style.color = "#ffffff";
                     document.getElementById("btn-tech").style.backgroundColor = "#ffffff";
                     document.getElementById("btn-tech").style.color = "#000000";
+                    document.getElementById("th-supported").style.display = "none";
                     document.getElementById("btn-lts").click();
                     break;
                 default:
@@ -444,6 +451,21 @@
             color: #16a34a;
             background-color: #d3e8db;
         }
+        /*make id=ver background is e6e6e6 and is a land capsule type and inside table backgroud color also that*/
+        #ver {
+            background-color: #e6e6e6;
+            border-radius: 30px;
+            padding: 9px;
+            margin: 15px auto;
+            width: fit-content;
+        }
+        #btn-all, #btn-supported, #btn-lts, #btn-tech {
+            border: none;
+        }
+        .txt{
+            font-size: 15px;
+            font-weight: bold;
+        }
     </style>
     <body>
         <p style="font-family: Arial, sans-serif;"><center><h1>Unity LTS 下載存檔</h1></center></p>
@@ -452,23 +474,23 @@
         <center>
         <table id="keep">
             <tr>
-                <th><button class="select" id="bUnity6" onclick='year("Unity6")'>Unity 6</button></th>
-                <th><button class="select" id="b2023" onclick='year("2023")'>2023</button></th>
-                <th><button class="select" id="b2022" onclick='year("2022")'>2022</button></th>
-                <th><button class="select" id="b2021" onclick='year("2021")'>2021</button></th>
-                <th><button class="select" id="b2020" onclick='year("2020")'>2020</button></th>
-                <th><button class="select" id="b2019" onclick='year("2019")'>2019</button></th>
-                <th><button class="select" id="b2018" onclick='year("2018")'>2018</button></th>
-                <th><button class="select" id="b2017" onclick='year("2017")'>2017</button></th>
-                <th><button class="select" id="bUnity5" onclick='year("Unity5")'>Unity 5</button></th>
+                <th><button class="select" id="bUnity6" onclick='year("Unity6")'><div class="txt">Unity 6</div></button></th>
+                <th><button class="select" id="b2023" onclick='year("2023")'><div class="txt">2023</div></button></th>
+                <th><button class="select" id="b2022" onclick='year("2022")'><div class="txt">2022</div></button></th>
+                <th><button class="select" id="b2021" onclick='year("2021")'><div class="txt">2021</div></button></th>
+                <th><button class="select" id="b2020" onclick='year("2020")'><div class="txt">2020</div></button></th>
+                <th><button class="select" id="b2019" onclick='year("2019")'><div class="txt">2019</div></button></th>
+                <th><button class="select" id="b2018" onclick='year("2018")'><div class="txt">2018</div></button></th>
+                <th><button class="select" id="b2017" onclick='year("2017")'><div class="txt">2017</div></button></th>
+                <th><button class="select" id="bUnity5" onclick='year("Unity5")'><div class="txt">Unity 5</div></button></th>
             </tr>
         </table>
         <table id="ver">
-            <tr>
-                <th><button class="select" id="btn-all" onclick='ver("ALL")'>ALL</button></th>
-                <th><button class="select" id="btn-supported" onclick='ver("SUPPORTED")'>SUPPORTED</button></th>
-                <th><button class="select" id="btn-lts" onclick='ver("LTS")'>LTS</button></th>
-                <th><button class="select" id="btn-tech" onclick='ver("TECH")'>TECH</button></th>
+            <tr id="ver">
+                <th id="th-all"><button class="select" id="btn-all" onclick='ver("ALL")'><div class="txt">All versions</div></button></th>
+                <th id="th-select"><button class="select" id="btn-supported" onclick='ver("SUPPORTED")'><div class="txt">Supported</div></button></th>
+                <th id="th-lts"><button class="select" id="btn-lts" onclick='ver("LTS")'><div class="txt">LTS</div></button></th>
+                <th id="th-tech"><button class="select" id="btn-tech" onclick='ver("TECH")'><div class="txt">Tech Stream</div></button></th>
             </tr>
         </table>
         <table border="1" id="Unity6">
